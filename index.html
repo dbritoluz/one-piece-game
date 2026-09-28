@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main id="escolhas">
+        <section class="escolha">
+            <div class="aleatorio-pai">
+                <div class="aleatorio" id="nome-bando">
+                    <h1>Escolhendo...</h1>
+                </div>
+            </div>
+
+            <button id="botao-rolar"><h1>Rolar</h1></button>
+
+            <div class="lista-tripulacao" id="lista-tripulacao">
+                <!-- <button class="personagem">
+                    <span class="nome">Luffy</span>
+                    <span class="poder">95</span>
+                </button>
+
+                <button class="personagem">
+                    <span class="nome">Zoro</span>
+                    <span class="poder">90</span>
+                </button>
+
+                <button class="personagem">
+                    <span class="nome">Sanji</span>
+                    <span class="poder">88</span>
+                </button> -->
+            </div>
+        </section>
+        <section class="selecao-tripulacao">
+            <div class="posicao cima">Ca</div>
+            <div class="posicao direita">Rw</div>
+            <div class="posicao esquerda">Lw</div>
+            <div class="posicao tras">4th</div>
+        </section>
+        <section class="escolhidos">
+            <div class="status">
+                <span>Score: <strong id="score">0</strong></span>
+                <span><strong id="qtd-escolhidos">0</strong>/4</span>
+            </div>
+
+            <div id="lista-escolhidos">
+                <!-- <div class="escolhido">
+                    <span class="nome-escolhido">Luffy</span>
+                    <span class="poder-escolhido">95</span>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <div id="tela-simulacao" class="oculto">
+        <div class="partida">
+            <div class="linha-partida">
+
+                <div class="time">
+                    <span class="sigla">VOCÊ</span>
+                    <strong id="nome-jogador">Sua Tripulação</strong>
+                </div>
+
+                <div class="placar">
+                    <span id="placar-jogador">0</span>
+                    <span>-</span>
+                    <span id="placar-inimigo">0</span>
+                </div>
+
+                <div class="time adversario">
+                    <strong id="nome-inimigo">Piratas Kid</strong>
+                </div>
+
+            </div>
+
+            <div class="eventos-partida" id="lista-confrontos">
+                <!-- <div class="confronto">
+                    <div class="lado jogador">
+                        <span class="nome-confronto">Luffy</span>
+                        <span class="poder-confronto">95</span>
+                    </div>
+
+                    <span class="vs">vs</span>
+
+                    <div class="lado inimigo">
+                        <span class="nome-confronto">Kaido</span>
+                        <span class="poder-confronto">99</span>
+                    </div>
+                </div>
+
+                <div class="confronto">
+                    <div class="lado jogador">
+                        <span class="nome-confronto">Zoro</span>
+                        <span class="poder-confronto">90</span>
+                    </div>
+
+                    <span class="vs">vs</span>
+
+                    <div class="lado inimigo">
+                        <span class="nome-confronto">King</span>
+                        <span class="poder-confronto">93</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="acoes-simulacao">
+            <button id="botao-proximo" class="oculto">
+                Próximo confronto
+            </button>
+
+            <button id="botao-reiniciar" class="oculto">
+                Reiniciar
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="script.js"></script>
