@@ -1,17 +1,3 @@
-const botaoRolar = document.getElementById("botao-rolar");
-const listaBando = document.getElementById("lista-tripulacao");
-const areaEscolha = document.querySelector(".escolha");
-const listaEscolhidos = document.querySelector("#lista-escolhidos");
-const statusJogador = document.querySelector(".status");
-let somaPoder = 0;
-let confrontoAtual = 0;
-const totalConfrontos = 3;
-
-let bandoInimigoAtual = null;
-let ultimoResultado = null;
-
-listaBando.style.display = "none";
-
 const bandos = [
     {
         nomeBando: "Chapéus de Palha",
@@ -440,8 +426,301 @@ const bandos = [
                 cargo: "normal"
             }
         ]
+    },
+
+    {
+        nomeBando: "Piratas Roger",
+        membros: [
+            {
+                nome: "Gol D. Roger",
+                poder: 101,
+                cargo: "capitao"
+            },
+            {
+                nome: "Silvers Rayleigh",
+                poder: 94,
+                cargo: "imediato"
+            },
+            {
+                nome: "Kozuki Oden",
+                poder: 90,
+                cargo: "normal"
+            },
+            {
+                nome: "Scopper Gaban",
+                poder: 89,
+                cargo: "normal"
+            },
+            {
+                nome: "Crocus",
+                poder: 73,
+                cargo: "normal"
+            },
+            {
+                nome: "Sunbell",
+                poder: 78,
+                cargo: "normal"
+            },
+            {
+                nome: "Seagull Guns Nozdon",
+                poder: 77,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas do Arlong",
+        membros: [
+            {
+                nome: "Arlong",
+                poder: 62,
+                cargo: "capitao"
+            },
+            {
+                nome: "Hatchan",
+                poder: 52,
+                cargo: "imediato"
+            },
+            {
+                nome: "Kuroobi",
+                poder: 50,
+                cargo: "normal"
+            },
+            {
+                nome: "Chew",
+                poder: 48,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Krieg",
+        membros: [
+            {
+                nome: "Don Krieg",
+                poder: 57,
+                cargo: "capitao"
+            },
+            {
+                nome: "Gin",
+                poder: 55,
+                cargo: "imediato"
+            },
+            {
+                nome: "Pearl",
+                poder: 46,
+                cargo: "normal"
+            },
+            {
+                nome: "Ideaman",
+                poder: 40,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas do Gato Preto",
+        membros: [
+            {
+                nome: "Kuro",
+                poder: 54,
+                cargo: "capitao"
+            },
+            {
+                nome: "Jango",
+                poder: 43,
+                cargo: "imediato"
+            },
+            {
+                nome: "Buchi",
+                poder: 42,
+                cargo: "normal"
+            },
+            {
+                nome: "Sham",
+                poder: 41,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Foxy",
+        membros: [
+            {
+                nome: "Foxy",
+                poder: 58,
+                cargo: "capitao"
+            },
+            {
+                nome: "Porche",
+                poder: 46,
+                cargo: "imediato"
+            },
+            {
+                nome: "Hamburg",
+                poder: 50,
+                cargo: "normal"
+            },
+            {
+                nome: "Pickles",
+                poder: 47,
+                cargo: "normal"
+            },
+            {
+                nome: "Big Pan",
+                poder: 52,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Bellamy",
+        membros: [
+            {
+                nome: "Bellamy",
+                poder: 69,
+                cargo: "capitao"
+            },
+            {
+                nome: "Sarquiss",
+                poder: 58,
+                cargo: "imediato"
+            },
+            {
+                nome: "Lily",
+                poder: 48,
+                cargo: "normal"
+            },
+            {
+                nome: "Muret",
+                poder: 47,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Caribou",
+        membros: [
+            {
+                nome: "Caribou",
+                poder: 68,
+                cargo: "capitao"
+            },
+            {
+                nome: "Coribou",
+                poder: 59,
+                cargo: "imediato"
+            },
+            {
+                nome: "Gaburu",
+                poder: 50,
+                cargo: "normal"
+            },
+            {
+                nome: "Tripulante Caribou 1",
+                poder: 46,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Hawkins",
+        membros: [
+            {
+                nome: "Basil Hawkins",
+                poder: 76,
+                cargo: "capitao"
+            },
+            {
+                nome: "Faust",
+                poder: 65,
+                cargo: "imediato"
+            },
+            {
+                nome: "Tripulante Hawkins 1",
+                poder: 59,
+                cargo: "normal"
+            },
+            {
+                nome: "Tripulante Hawkins 2",
+                poder: 57,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Fire Tank",
+        membros: [
+            {
+                nome: "Capone Bege",
+                poder: 77,
+                cargo: "capitao"
+            },
+            {
+                nome: "Vito",
+                poder: 67,
+                cargo: "imediato"
+            },
+            {
+                nome: "Gotti",
+                poder: 65,
+                cargo: "normal"
+            },
+            {
+                nome: "Charlotte Chiffon",
+                poder: 45,
+                cargo: "normal"
+            }
+        ]
+    },
+
+    {
+        nomeBando: "Piratas Bonney",
+        membros: [
+            {
+                nome: "Jewelry Bonney",
+                poder: 79,
+                cargo: "capitao"
+            },
+            {
+                nome: "Gyogyo",
+                poder: 60,
+                cargo: "imediato"
+            },
+            {
+                nome: "Tripulante Bonney 1",
+                poder: 57,
+                cargo: "normal"
+            },
+            {
+                nome: "Tripulante Bonney 2",
+                poder: 55,
+                cargo: "normal"
+            }
+        ]
     }
 ];
+
+
+const botaoRolar = document.getElementById("botao-rolar");
+const listaBando = document.getElementById("lista-tripulacao");
+const areaEscolha = document.querySelector(".escolha");
+const listaEscolhidos = document.querySelector("#lista-escolhidos");
+const statusJogador = document.querySelector(".status");
+let somaPoder = 0;
+let confrontoAtual = 0;
+const totalConfrontos = 3;
+let bandoInimigoAtual = null;
+let ultimoResultado = null;
+listaBando.style.display = "none";
 
 const equipeJogador = {
     capitao: null,
@@ -472,11 +751,24 @@ document.getElementById("botao-reiniciar").addEventListener("click", function(){
 });
 
 function sortearBando(){
-    const random = Math.floor(Math.random() * bandos.length);
+    const nomeBando = document.getElementById("nome-bando");
+    let contador = 0;
+    const intervalo = setInterval(() => {
+        const indiceAleatorio = Math.floor(Math.random() * bandos.length);
+        nomeBando.innerHTML =`<h1>${bandos[indiceAleatorio].nomeBando}</h1>`;
+        contador++;
+        if(contador >= 12){
+            clearInterval(intervalo);
 
-    const bandoSorteado = bandos[random];
+            const random = Math.floor(Math.random() * bandos.length);
 
-    mostraBando(bandoSorteado);
+            const bandoSorteado = bandos[random];
+
+            nomeBando.innerHTML = `<h1>${bandoSorteado.nomeBando}</h1>`;
+
+            mostraBando(bandoSorteado);
+        }
+    }, 100);
 }
 
 function mostraBando(bando){
@@ -580,13 +872,17 @@ function adicionaConves(membro){
 
     if(membro.cargo == "capitao"){
         slot = document.querySelector(".cima");
+        slot.classList.add("picked");
     }
     else if(membro.cargo == "imediato"){
         slot = document.querySelector(".direita");
+        slot.classList.add("picked");
     }else if(equipeJogador.normais.length == 1){
         slot = document.querySelector(".esquerda");
+        slot.classList.add("picked");
     }else if(equipeJogador.normais.length == 2){
         slot = document.querySelector(".tras");
+        slot.classList.add("picked");
     }
 
     slot.innerHTML = `<span class="poder-slot">${membro.poder}</span>
@@ -1038,7 +1334,7 @@ const placarJogador =
     const resumo =
         document.createElement("div");
 
-    resumo.classList.add("linha-partida");
+    resumo.classList.add("linha-partida", "resumo-anterior");
 
 
     resumo.innerHTML = `
@@ -1176,6 +1472,10 @@ function reiniciarJogo(){
     document.getElementById("botao-proximo").classList.add("oculto");
 
     document.getElementById("botao-reiniciar").classList.add("oculto");
+
+    document.querySelectorAll(".resumo-anterior").forEach(resumo => {
+        resumo.remove();
+    });
 
     // troca as telas
     document.getElementById("tela-simulacao").classList.add("oculto");

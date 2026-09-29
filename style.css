@@ -1,5 +1,26 @@
+
 body{
-    background-color: #e3d3b0
+    background-color: #e3d3b0;
+}
+
+header{
+    border-bottom: 3px solid #8a684a;
+    margin-bottom: 20px;
+}
+
+.cabecalho{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.areaLogo{
+    width: 30%;
+}
+
+.areaLogo img{
+    width: 100%;
 }
 
 main{
@@ -50,7 +71,7 @@ main{
     max-width: 90%;
 
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: "Rye", serif;
 
     font-size: clamp(24px, 2.2vw, 34px);
     line-height: 1.05;
@@ -169,20 +190,8 @@ main{
     overflow: hidden;
 
     /* fundo do convés */
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(255,255,255,0.05) 0%,
-            rgba(255,255,255,0.015) 45%,
-            rgba(0,0,0,0.22) 100%
-        ),
-        repeating-linear-gradient(
-            90deg,
-            #a56b3a 0px,
-            #9b6234 115px,
-            #5f361a 115px,
-            #4b2813 120px
-        );
+    background-image: url("shipBackground.png");
+    background-position: center;
 
     border: 6px solid #5a3217;
 
@@ -223,7 +232,7 @@ main{
 
     border-radius: 50%;
 
-    background-color: #f3dfae;
+    background-color: rgba(243, 223, 174, 0.7);
 
     border: 3px dashed #a22a33;
 
@@ -233,12 +242,16 @@ main{
         inset 0 -3px 6px rgba(90,45,15,0.18);
 
     color: #5a3118;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Luckiest Guy", cursive;
     font-size: 18px;
     font-weight: bold;
     text-shadow: 0 1px 0 rgba(255,248,220,0.45);
 
     box-sizing: border-box;
+}
+
+.picked{
+    background-color: rgba(243, 223, 174, 1);
 }
 
 .poder-slot{
@@ -265,12 +278,12 @@ main{
     transform: translate(-50%);
 }
 
-.direita{
+.esquerda{
     left: 10%;
     top: 45%;
 }
 
-.esquerda{
+.direita{
     right: 10%;
     top: 45%;
 }
@@ -301,7 +314,7 @@ main{
 
     border-radius: 4px;
 
-    font-family: Arial, sans-serif;
+    font-family: "Luckiest Guy", cursive;
     font-weight: bold;
 
     margin-bottom: 12px;
@@ -325,7 +338,7 @@ main{
 
     border-bottom: 1px solid #d0bea0;
 
-    font-family: Arial, sans-serif;
+    font-family: "Luckiest Guy", cursive;
 }
 
 .escolhido:last-child{
@@ -428,7 +441,7 @@ main{
 
     background-color: #fff;
 
-    font-family: Arial, sans-serif;
+    font-family: "Luckiest Guy", cursive;
 }
 
 .oculto {
